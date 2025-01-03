@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Divs</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d1c4b3; /* Beige background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.template-container {
+    display: flex;
+    max-width: 900px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact-btn:hover {
+    background-color: #555;
+}
+
+/* Image Content and Overlapping Boxes */
+.image-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlap-box {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Individual Box Styles */
+.box1 {
+    background-color: #e9741b;
+    z-index: 1;
+    top: 10px;
+    left: 20px;
+}
+
+.box2 {
+    background-image: url('./img_3.png'); /* Replace with your photo */
+    z-index: 2;
+    top: 40px;
+    left: 60px;
+}
+
+.box3 {
+    background-color: #333;
+    z-index: 3;
+    top: 70px;
+    left: 100px;
+}
+
+     </style>
+</head>
+<body>
+    <div class="template-container">
+        <div class="text-content">
+            <h1>We Create Websites</h1>
+            <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+            </p>
+            <button class="contact-btn">Contact Us</button>
+        </div>
+        <div class="image-content">
+            <!-- Overlapping Divs -->
+            <div class="overlap-box box1"></div>
+            <div class="overlap-box box2"></div>
+            <div class="overlap-box box3"></div>
+        </div>
+    </div>
+</body>
+</html>
