@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100wh;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden auto;
+    }
+
+    .main {
+        height: 500px;
+        width: 1000px;
+        display: grid;
+        border: 1px solid black;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        gap: 10px;
+    }
+
+    .box {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</Style>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <h1>Header</h1>
+        </div>
+        <div class="box">
+            <h1>Section 1</h1>
+        </div>
+        <div class="box">
+            <h1>Section 2</h1>
+        </div>
+        <div class="box">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+
+</html>
