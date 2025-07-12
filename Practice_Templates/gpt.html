@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 10px;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden auto;
+        }
+        .media{
+            display: flex;
+            justify-content:space-between ;
+            align-items: center;
+            padding: 1.3rem;
+            background-color: whitesmoke;
+        }
+        .screens {
+            display: flex;
+            gap: 1rem;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1.3rem;
+        }
+        .navbar a{
+            padding: 1rem;
+            text-decoration: none;
+            color: black;
+            font-size: 1.7rem;
+        }
+        .image{
+            background-color:#ddcebb ;
+            width: 100%;
+            min-height: 50rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .imagesec1{
+            width: 50%;
+            height: 100%;
+            
+        }
+        .imagesec1 img{
+            width: 100%;
+            height: 100%;
+        }
+        .imagesec2{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 6rem;
+        }
+        .txt1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            font-size: 2rem;
+            max-width: 50rem;
+            height: 50rem;
+        }
+        .txt1 h1{
+            font-size: 6rem;
+            max-width: 30rem;
+        }
+        .txt1 button{
+            height: 4rem;
+            width: 18rem;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 1rem;
+        }
+        .capcards{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            
+        }
+        .capabilities{
+            background-color:#ddcebb ;
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            padding: 4rem;
+        }
+        .capname{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        .capinfo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .capinfo a{
+            color: black;
+        }
+        .capcard{
+            width: 25%;
+            min-height: 28rem;
+            font-size: 2rem;
+            padding: 2.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-color: white;
+            border-top: 1rem solid orange ;
+        }
+        .capcardinfo{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .position{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ddcebb;
+        }
+        .poscontainer{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+            padding: 7.7rem;
+        }
+        .poscontainer2{
+            position: relative;
+        }
+        .poscontainer1{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-color: white;
+            padding: 5rem;
+        }
+        .poscontainer1 h1{
+            font-size: 6rem;
+        }
+        .poscontainer1 p{
+            font-size: 2rem;
+        }
+        .poscontainer3{
+            background-color:white;
+            padding: 5rem;
+            position: relative;
+        }
+        .poscontainer2 img{
+            width: 100%;
+            height: 40rem;
+        }
+        .poscontainer1 button{
+            height: 4rem;
+            width: 18rem;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 1rem;
+        }
+        .posmain{
+            position: relative;
+        }
+        .posimage img{
+            width: 100%;
+            height: 40rem;
+        }
+        .posimage{
+            position: absolute;
+            width: 80%;
+            height: 60rem;
+            top: 1rem;
+            right: -2rem;
+            
+            
+        }
+        .poscolor {
+            background-color:rgb(250, 117, 35);
+            height: 60rem;
+            width: 75%;
+            position: absolute;
+            opacity: 0.7;
+            top: -4.5rem;
+            right: -10rem;
+        }
+        
+        .human img{
+            width: 100%;
+            height:79rem ;
+        }
+        .webcontainer1{
+            display: flex;
+        }
+        
+        .webcard{
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1rem;
+            width: 50%;
+            height: 20rem;
+        }
+        .webcard i{
+            font-size:4rem ;
+        }
+        .webcardinfo h2{
+            font-size: 2.3rem;
+        }
+        .webcardinfo{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .webcard p{
+            font-size: 1.5rem;
+        }
+        .webinfo{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            min-height: 68rem;
+            width: 40%;
+            background-color: #ddcebb;
+            padding: 3rem;
+        }
+        .webinfo h1{
+            font-size: 6rem;
+        }
+        .webinfo p{
+            font-size: 2rem;
+
+        }
+        .webcontainer{
+            padding: 2rem;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            min-height: 50rem;
+        }
+        .about{
+            background-color:#ddcebb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100rem;
+            gap: -2rem;
+        }
+        .webcardpara{
+            line-height: 3rem;
+        }
+       .baricon{
+        display: none;
+        font-size: 2.5rem;
+       }
+       .hand{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddcebb;
+       }
+       .handimage img{
+        width: 90%;
+        height: 70rem;
+       }
+       .handinfo{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+       }
+       .handcard{
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        gap: 20rem;
+       }
+       .handnumber{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+       }
+       .handcard h1{
+        font-size: 6rem;
+        color: rgb(245, 86, 28);
+       }
+       .handcard h6{
+        font-size: 2.3rem;
+       }
+       .handinfoh{
+         font-size: 3.5rem;
+       }
+       .handpara{
+        font-size: 2rem;
+       }
+       .handinfolast{
+        font-size: 2rem;
+       }
+       .cardingdata{
+        width: 100%;
+        background-image: url("//images01.nicepage.com/c461c07a441a5d220e8feb1a/b33b06a8cbdd51d8b00e4fdc/vvv-min.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 60%;
+        min-height: 95rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+       }
+       .cardingimg h1{
+        
+        color: white;
+        font-size: 6rem;
+       }
+       .cardinginfo{
+         min-height: 70rem;
+         width: 80%;
+         border: 1px solid black;
+         display: flex;
+         flex-wrap: wrap;
+         background-color: white;
+       }
+       .cardingcard{
+        padding: 3rem;
+        width: 33.33%;
+        min-height: 20rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+       }
+       .cardingcard h2{
+        font-size: 4rem;
+        color: orangered;
+       }
+       .cardingcard p{
+        font-size: 2.5rem;
+       }
+       .cardingcard i{
+        font-size: 3rem;
+        color: orangered;
+       }
+       .middlepage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .dimage{
+        position: relative;
+        background-color:aqua;
+        min-height: 100%;
+       }
+       .dimagesec1 img{
+           width: 100%;
+           height: 70rem;
+        
+           top: 3rem;
+       }
+       .dimagesec2{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 33%;
+        padding: 3rem;
+        min-height: 50%;
+        padding-top: 6rem;
+        position: absolute;
+        top: 50rem;
+        left: 25rem;
+        background-color:aquamarine;
+       }
+       .dimagesec2 h1{
+        font-size: 4rem;
+       }
+       .dimagesec2 p{
+        font-size: 2rem;
+       }
+       .dimagesec2 button{
+            height: 4.2rem;
+            width: 20rem;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 1rem;
+       }
+       .dimage2{
+        padding-left: 25rem;
+        padding-right: 25rem;
+        position: absolute;
+        top: 13rem;
+       }
+       .imageorg{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #ddcebb;
+        width: 100%;
+        min-height: 100rem;
+        position: relative;
+       }
+       .imgorg1{
+        width: 30%;
+        height: 60%;
+        background-color: orange;
+        position: absolute;
+        left: 18rem;
+        bottom: 6rem;
+       }
+       .imgorg2{
+        width: 30%;
+        height: 60%;
+        background-color: orange;
+        position: absolute;
+        right: 18rem;
+        top: 6rem;
+       }
+       @media only screen and (max-width:1000px){
+        .capcard{
+            width: 45%;       
+        }
+        .webinfo{
+            font-size: 9px;
+        }
+        
+
+       }
+       @media only screen and (max-width:900px){
+        html{
+            font-size: 9.5px;
+        }
+        .baricon{
+            display: block;
+        }
+        .navitem{
+            display: none;
+        }
+        .image{
+            flex-wrap: wrap-reverse;
+        }
+        .imagesec1{
+            width: 80%;
+        }
+        .imagesec2{
+            width: 80%;
+        }
+        .capcard{
+            width: 45%;
+            
+        }
+        .capcards{
+            flex-wrap: wrap;
+        }
+        .poscontainer1{
+            width: 70%;
+        }
+        .poscontainer3{
+            width: 60%;
+        }
+        .position{
+            flex-wrap: wrap;
+            gap: 10rem;
+        }
+        .about{
+            flex-wrap: wrap;
+            gap: 5rem;
+        }
+        .webinfo{
+            width: 100%;
+        }
+        .human img{
+            width: 100%;
+        }
+        .hand{
+            flex-wrap: wrap-reverse;
+        }
+        .handimage{
+            width: 100%;
+        }
+        .handinfo{
+            width: 80%;
+            
+        }
+        .cardingcard{
+            width: 50%;
+        }
+        .cardinginfo{
+            flex-wrap: wrap;
+        }
+    }
+    @media only screen and (max-width:800px){
+        html{
+            font-size: 9.3px;
+        }
+       }
+    @media only screen and (max-width:700px){
+        html{
+            font-size: 9px;
+        }
+        .capcard{
+            width: 80%;
+            
+        }
+        .capcards{
+            flex-wrap: wrap;
+        }
+        .webcontainer{
+            gap: 6rem;
+            width: 80%;
+            border-radius: 4rem;
+        }
+        .webcontainer1{
+            flex-wrap: wrap;
+            gap: 6rem;
+        }
+        .webcard{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.7rem;
+            padding: 0.4rem;
+        }
+        .webcard i{
+            color: rgb(243, 117, 71);
+        }
+        .webcon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cardingcard{
+            width: 100%;
+        }
+        .cardinginfo{
+            flex-wrap: wrap;
+        }
+       }
+       @media only screen and (max-width:625px){
+        html{
+            font-size: 8.5px;
+        }
+       }
+       @media only screen and (max-width:550px){
+        html{
+            font-size: 8px;
+        }
+       }
+       @media only screen and (max-width:500px){
+        html{
+            font-size: 7.5px;
+        }
+       }
+       @media only screen and (max-width:450px){
+        html{
+            font-size: 7px;
+        }
+       }
+       @media only screen and (max-width:400px){
+        html{
+            font-size: 6.5px;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <section class="media">
+            <img src="//csite.nicepage.com/Images/logo-w.png">
+            <div class="screens">
+                <img src="//csite.nicepage.com/Images/Site/responsive-desktop.png">
+                <img src="//csite.nicepage.com/Images/Site/responsive-desktop.png">
+                <img src="//csite.nicepage.com/Images/Site/responsive-tablet.png">
+                <img src="//csite.nicepage.com/Images/Site/responsive-phone-horizontal.png">
+                <img src="//csite.nicepage.com/Images/Site/responsive-phone.png">
+            </div>
+            <i class="fa-solid fa-x"></i>
+        </section>
+        <section class="navbar">
+            <img src="//capp.nicepage.com/images/default-logo.png">
+            <div class="navitem">
+                <a href="">HOME</a>
+                <a href="">ABOUT US</a>
+                <a href="">OUR TEAM</a>
+                <a href="">CONTACT US</a>
+            </div>
+            <div class="baricon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+        <section class="image">
+            <div class="imagesec1">
+                    <img src="./img_1.jpg">          
+            </div>
+            <div class="imagesec2">
+                <div class="txt1">
+                <h1>We Create<br> websites</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore<br> magna aliqua. Amet massa vitae tortor condimentum<br> lacinia quis. Egestas dui id ornare arcu odio ut sem<br> nulla pharetra. </p>
+                <p>Image from <a href="">Freepik</a></p>
+                <button>CONTACT US</button>
+               </div>
+            </div>
+        </section>
+        <section class="capabilities">
+            <div class="capname">
+                <h1>Capabilities</h1>
+            </div>
+            <div class="capinfo">
+                <P>The result of our company branding process is a comprehensive brand guideline that<br> can be used to design a <a href="">marketing website</a> and other design assets like brand<br> illustrations that reflect the new brand. </P>
+            </div>
+            <div class="capcards">
+                <div class="capcard">
+                    <h2>Brand strategy</h2>
+                    <div class="capcardinfo">
+                        <p>— Brand equity audit </p>
+                        <p>— Audience analysis </p>
+                        <p>— Competitive review </p>
+                        <P>— Strategic direction</P>
+                    </div>
+                </div>
+                <div class="capcard">
+                    <h2>Brand identity</h2>
+                    <div class="capcardinfo">
+                        <p>— Visual positioning </p>
+                        <p>— Visual identity system </p>
+                        <p>— Icon & illustration guides </p>
+                        <P>— Brand application </P>
+                    </div>
+                </div>
+                <div class="capcard">
+                    <h2>Communication<br> strategy</h2>
+                    <div class="capcardinfo">
+                        <p>— Verbal identity </p>
+                        <p>— Tagline exploration </p>
+                        <p>— Communication style guide </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="posmain">
+        <section class="position">     
+                <div class="poscontainer1">
+                    <h1>We Create <br>Websites</h1>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate<br> velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt.</p>
+                    <p>Image from<a href="Freepik"></a></p>
+                    <button>CONTACT US</button>
+                </div>      
+    <div class="poscontainer3">
+        <div class="poscontainer2">
+            <img src="//images01.nicepage.com/aa/49/aa49e5bbcb321c65e1d4ba4d4afa599b.png">
+        </div>
+        <div class="poscolor"> 
+        </div> <div class="posimage">
+        <img src="//images01.nicepage.com/c461c07a441a5d220e8feb1a/0a9528c5f3385f139a140657/56.jpg">
+        </div>
+    </div>
+   </section>
+    </section>
+    <section class="about">
+        <section class="webinfo">
+            <div class="webname">
+            <h1>About Us</h1>
+            </div>
+            <div class="webinfo1">
+                <p>Sample text. Click to select the text box. Click again or<br> double click to start editing the text.</p>
+            </div>
+            <div class="weblink">
+                <p>Image by <a href="">Freepik</a></p>
+            </div>
+            <div class="webcon">
+            <div class="webcontainer">
+                <div class="webcontainer1">
+                    <div class="webcard">
+                        <div class="webicon">
+                            <i class="fa-regular fa-lightbulb"></i>
+                        </div>
+                        <div class="webcardinfo">
+                            <h2>1. Strategy</h2>
+                            <div class="webcardpara">
+                                <p>Sample text. Click to<br> select the text box.<br> Click again or double<br> click to start editing<br> the text.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="webcard">
+                        <div class="webicon">
+                            <i class="fa-regular fa-flag"></i>
+                        </div>
+                        <div class="webcardinfo">
+                            <h2>2. Branding</h2>
+                            <div class="webcardpara">
+                                <p>Sample text. Click to<br> select the text box.<br> Click again or double<br> click to start editing<br> the text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="webcontainer1">
+                    <div class="webcard">
+                        <div class="webicon">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+                        <div class="webcardinfo">
+                            <h2>3. DESIGN</h2>
+                            <div class="webcardpara">
+                                <p>Sample text. Click to<br> select the text box.<br> Click again or double<br> click to start editing<br> the text.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="webcard">
+                        <div class="webicon">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="webcardinfo">
+                            <h2>4. Markeing</h2>
+                            <div class="webcardpara">
+                                <p>Sample text. Click to<br> select the text box.<br> Click again or double<br> click to start editing<br> the text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="human">
+            <img src="//images01.nicepage.com/c461c07a441a5d220e8feb1a/d3601af94e885e18b3426c11/hgghghh-min.jpg">
+        </section>
+    </section>
+    <section class="hand">
+        <div class="handimage">
+            <img src="./img_5.jpg">
+        </div>
+        <div class="handinfo">
+            <div class="handinfoh">
+                <h1>We help the world's best<br> brands sell more online</h1>
+            </div>
+            <div class="handpara">
+               <h4>We bring digital experiences to life, solving everyday problems with<br> customer-centric solutions.</h4>
+            </div>
+            <div class="handnumber">
+                <div class="handcard">
+                     <div class="handcard1">
+                          <h1>23</h1>
+                          <h6>APPS</h6>
+                     </div>
+                     <div class="handcard1">
+                        <h1>70+</h1>
+                        <h6>websites</h6>
+                     </div>
+                </div>
+                <div class="handcard">
+                    <div class="handcard1">
+                        <h1>50+</h1>
+                        <h6>teams</h6>
+                    </div>
+                    <div class="handcard1">
+                        <h1>18K</h1>
+                        <h6>happy users</h6>
+                    </div>
+               </div>
+            </div>
+            <div class="handinfolast">
+                <p>Image from <a href="Freepik"></a></p>
+            </div>
+        </div>
+    </section>
+    <section class="cardingdata">
+          <div class="cardingimg">
+               <h1>Quick, Smart & Great Solutions</h1>
+          </div>
+          <div class="middlepage">
+          <div class="cardinginfo">
+              <div class="cardingcard">
+                  <h2>Award Winner</h2>
+                  <p>Ut enim ad minim veniam, quis<br> nostrud exercitation ullamco<br> laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute<br> irure dolor in reprehenderit in<br> voluptate</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="cardingcard">
+                  <h2>Team of Experts</h2>
+                  <p>Ut enim ad minim veniam, quis<br> nostrud exercitation ullamco<br> laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute<br> irure dolor in reprehenderit in<br> voluptate</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="cardingcard">
+                  <h2>Consulting</h2>
+                  <p>Ut enim ad minim veniam, quis<br> nostrud exercitation ullamco<br> laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute<br> irure dolor in reprehenderit in<br> voluptate</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="cardingcard">
+                  <h2>Research</h2>
+                  <p>Ut enim ad minim veniam, quis<br> nostrud exercitation ullamco<br> laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute<br> irure dolor in reprehenderit in<br> voluptate</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="cardingcard">
+                  <h2>Marketing</h2>
+                  <p>Ut enim ad minim veniam, quis<br> nostrud exercitation ullamco<br> laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute<br> irure dolor in reprehenderit in<br> voluptate</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="cardingcard">
+                  <h2>Management</h2>
+                  <p>Ut enim ad minim veniam, quis<br> nostrud exercitation ullamco<br> laboris nisi ut aliquip ex ea<br> commodo consequat. Duis aute<br> irure dolor in reprehenderit in<br> voluptate</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+              </div>
+          </div>
+        </div>
+    </section>
+    <section class="dimage">
+        <div class="imageorg">
+            <div class="imgorg1">
+                hi
+            </div>
+            <div class="imgorg2">
+               hello
+            </div>
+        </div>
+        <div class="dimage2">
+        <div class="dimagesec1">
+            <img src="//images01.nicepage.com/c461c07a441a5d220e8feb1a/c37f04028d995a27a1474f74/bvvbvb-min.jpg">
+        </div>
+       </div>
+        <div class="dimagesec2">
+            <h1>Convert New Customers<br>
+                With A Powerful Website</h1>
+            <p>Duis aute irure dolor in reprehenderit in<br> voluptate velit esse cillum dolore eu fugiat nulla<br> pariatur. Excepteur sint occaecat cupidatat non<br> proident</p>
+            <p>Image From <a href="">Freepik</a></p>
+            <button>CONTACT US</button>
+        </div>
+    </section>
+    </div>
+</body>
+</html>
