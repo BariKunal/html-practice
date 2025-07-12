@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html {
+			font-size: 10px;
+		}
+
+		body {
+
+			min-height: 100vh;
+			width: 100vw;
+			overflow: hidden auto;
+		}
+
+		.wrapper {
+			height: 100%;
+			width: 100%;
+		}
+
+		.header {
+			height: 9rem;
+			width: 100%;
+			border: 1px solid black;
+			/* background-color: black; */
+			display: flex;
+			justify-content: space-between;
+			padding: 0rem 4rem;
+			align-items: center;
+
+		}
+
+		.header img {
+			height: 5rem;
+			width: 5rem;
+		}
+
+		.logo h1 {
+			font-size: 3rem;
+		}
+
+		.super-section {
+			height: 50rem;
+			width: 100%;
+			border: 1px solid black;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+
+		.super-content {
+			border: 1px solid black;
+			padding: 4rem;
+			min-height: 30rem;
+			width: 40%;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			justify-content: center;
+			align-items: flex-start;
+			margin-right: 10rem;
+		}
+
+		.super-content h1 {
+			font-size: 4rem;
+		}
+
+		.capabilities h1 {
+			font-size: 3.2rem
+		}
+
+		.super-content p,
+		.capabilities p {
+			font-size: 1.6rem;
+			/*  make the font italic  */
+			font-style: italic;
+		}
+
+		.super-content button {
+			padding: 1rem;
+			font-size: 1.6rem;
+			background-color: black;
+			color: white;
+			/*  no border  */
+			border: none;
+		}
+
+		.free {
+			/*  underline  */
+			text-decoration: underline;
+		}
+
+
+
+
+		.capabilities {
+			height: 20rem;
+			width: 100%;
+			padding: 4rem;
+			border: 1px solid black;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 3rem;
+			text-align: center;
+		}
+
+		.cards {
+			min-height: 34rem;
+			width: 100%;
+			border: 1px solid black;
+			display: flex;
+			gap: 2rem;
+			justify-content: center;
+			padding: 4rem;
+			flex-wrap: wrap;
+		}
+
+		.card {
+			height: 27rem;
+			width: 27%;
+			border: 1px solid black;
+			padding: 4rem;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: 2.5rem;
+
+		}
+
+		.strategies {
+			display: flex;
+			flex-direction: column;
+			gap: 0.7rem;
+		}
+
+		.card h1 {
+			font-size: 3rem;
+
+		}
+
+		.card p {
+			font-size: 1.6rem;
+		}
+
+		.strategy {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		.contact-us {
+			width: 85%;
+			min-height: 50rem;
+			border: 1px solid black;
+			margin: auto;
+			padding: 3rem;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.contact-1,
+		.contact-2 {
+			width: 50%;
+			border: 1px solid black;
+			height: 40rem;
+		}
+
+		.contact-1 {
+			display: flex;
+
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 2rem;
+			padding: 4rem;
+		}
+
+		.contact-1 h1 {
+			font-size: 3rem;
+		}
+
+		.contact-1 p {
+			font-size: 1.6rem;
+		}
+
+		.contact-1 button {
+			font-size: 1.5rem;
+			padding: 0.5rem;
+		}
+
+		.contact-2 {
+			position: relative;
+		}
+
+		.swaggy-cat,
+		.chidleli-cat {
+			height: 20rem;
+			width: 22rem;
+			object-fit: cover;
+			position: absolute;
+
+
+		}
+
+		.transparent {
+			height: 40rem;
+			width: 30rem;
+			/* 0-255 */
+			/* red, green, blue */
+			background-color: rgba(221, 147, 10, 0.4);
+			position: absolute;
+			top: 2%;
+			left: 15%;
+		}
+
+		.chidleli-cat {
+			z-index: 10;
+			top: 5%;
+			left: 25%;
+		}
+
+		.transparent {
+			z-index: 5;
+		}
+
+		.swaggy-cat {
+			z-index: 1;
+			top: 18%;
+			left: 10%;
+		}
+
+		@media screen and (max-width:900px) {
+			html {
+				font-size: 9px;
+			}
+
+			.card {
+				width: 40%;
+			}
+
+			.contact-us {
+				justify-content: center;
+			}
+
+			.contact-2 {
+				height: 50rem;
+			}
+
+			.contact-1,
+			.contact-2 {
+				width: 90%;
+			}
+		}
+
+		@media screen and (max-width:500px) {
+			html {
+				font-size: 8px;
+			}
+
+			.super-section {
+				justify-content: center;
+			}
+
+			.super-content {
+				width: 90%;
+				margin-right: 0rem;
+			}
+
+			.card {
+				width: 90%;
+				align-items: center;
+			}
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<!-- header -->
+		<div class="header">
+			<div class="logo">
+				<h1>Logo</h1>
+			</div>
+			<div class="menu">
+				<img src="https://cdn-icons-png.flaticon.com/512/2311/2311531.png" alt="">
+			</div>
+		</div>
+
+		<!--  super section -->
+		<div class="super-section">
+			<div class="super-content">
+				<h1>We Create Websistes </h1>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa nulla minima culpa velit recusandae
+					saepe praesentium totam consequatur natus alias minus, atque, deleniti laboriosam, eum aliquid!
+					Deserunt debitis minus repellendus.</p>
+
+				<p>image from <span class="free">Freepik</span></p>
+
+				<button>CONTACT US</button>
+			</div>
+		</div>
+
+
+		<div class="capabilities">
+			<h1>Capabilities</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquam soluta <br> tempore maiores ipsa
+				optio laudantium. Ad harum, <br> maiores ipsum delectus corporis quibusdam laboriosam esse nesciunt
+				molestias, deleniti officiis! Dolorum?</p>
+		</div>
+
+		<div class="cards">
+			<div class="card">
+				<h1>Brand Strategy</h1>
+				<div class="strategies">
+
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<h1>Brand Strategy</h1>
+				<div class="strategies">
+
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card">
+				<h1>Brand Strategy</h1>
+				<div class="strategies">
+
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+					<div class="strategy">
+						<p>-</p>
+						<p>Brand Equity Audit</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="contact-us">
+			<div class="contact-1">
+				<h1>We Create Websites </h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti accusamus minima expedita
+					repudiandae non, soluta mollitia, dolorum quidem id perferendis dignissimos deserunt aliquam nobis
+					sunt fugit ipsum suscipit rerum assumenda.</p>
+
+				<button>Contact Us</button>
+			</div>
+			<div class="contact-2">
+				<img class="swaggy-cat"
+					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s"
+					alt="">
+
+				<img class="chidleli-cat"
+					src="https://media.istockphoto.com/id/1481903369/photo/a-cat-in-the-hands.jpg?s=612x612&w=is&k=20&c=-M2wamGuENlYs4dqm0H_gzImHjw7tyr_eMa70Fldpcs="
+					alt="">
+
+				<div class="transparent">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
