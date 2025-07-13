@@ -1,0 +1,99 @@
+<!-- /*
+A menu-driven program presents the user with a list of options and performs actions based on the user's choice.
+ Here, the menu is created  buusingttons. JavaScript handles the logic for each option when clicked.
+-Reverse a Number
+-Sum of Digits of a Number
+-Check if a Number is a Palindrome
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden auto;
+}
+.main{
+    height:450px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: rgb(192, 230, 57);
+}
+button{
+    height: 40px;
+    width: 200px;
+    background-color: rgb(124, 157, 241);
+    border: 1px solid dotted;
+}
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <button class="menu-button" onclick="reverseNumber()">Reverse a Number</button>
+        <button class="menu-button" onclick="sumOfDigits()">Sum of Digits of a Number</button>
+        <button class="menu-button" onclick="checkPalindrome()">Check if a Number is a Palindrome</button>
+        <div id="output"></div>
+    </div>
+
+    <script type="text/JavaScript">
+
+       function getNumber() {
+            let input = prompt("Enter a number:");
+            if (input === null || input.trim() === "") {
+                return null; 
+            }
+            const num = parseInt(input);
+            if (isNaN(num)) {
+                alert("enter a valid number.");
+                return null;
+            }
+            return num;
+        }
+        function displayOutput(message) {
+            document.getElementById('output').innerText = message;
+        }
+        function reverseNumber() {
+            const num = getNumber();
+            const reversedNum = parseInt(String(num).split('').reverse().join(''));
+            displayOutput("Reversed Number:  " +reversedNum);
+        }
+
+        function sumOfDigits() {
+            const num = getNumber();
+            let sum = 0;
+            let tempNum = num; 
+            while (tempNum > 0) {
+                sum += tempNum % 10;
+                tempNum = parseInt(tempNum / 10);
+            }
+            displayOutput("Sum of Digits:     " +sum);
+        }
+
+        function checkPalindrome() {
+            const num = getNumber();
+            const numStr = String(num);
+            const reversedNumStr = numStr.split('').reverse().join('');
+
+            if (numStr === reversedNumStr) {
+                displayOutput("Number is a Palindrome!");
+            } else {
+                displayOutput("Number:  is NOT a Palindrome.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
