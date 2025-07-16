@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cointener">
+
+            <h1>Validation</h1>
+            <form action="">  
+            <input type="text" name="name" id="name" value="" placeholder="Full Name" onkeyup="validName(this.value)" /><span id="s"></span><br>
+            <input type="email" name="email" id="email" value="" placeholder="Enter Email" onkeyup="validEmail(this.value)" /> <span id="e"></span><br>
+            <input type="text" name="contact" id="contact" value="" placeholder="Enter Phone" onkeyup="validContact(this.value)" /><span id="c"></span><br>
+            <input type="password" name="pas1" id="pass1" value="" placeholder=" Password" onkeyup="validPass(this.value)" /><span id="d"></span><br>
+            <button type="submit" id="button">sign up</button>
+        </form>
+    </div>
+
+
+    <script type="text/javascript">
+        function validName(str) {
+            let flag = true;
+            str = str.toLowerCase();
+            let span = document.getElementById("s");
+            for (var i = 0; i < str.length; i++) {
+                if (!((str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) || str.charCodeAt(i) == 32)) {
+                    flag = false;
+                }
+            }
+            if (flag) {
+                span.innerHTML = "Valid Name";
+                span.style.color = "green";
+
+            } else {
+                span.innerHTML = "Invalid Name";
+                span.style.color = "red";
+
+            }
+        }
+
+        
+        function validEmail(str) {
+            let index = str.indexOf("@"); 
+            let index1 = str.lastIndexOf("@");
+            let span = document.getElementById("e");
+
+            if (index <= 0 || index != index1) {
+                span.innerHTML = "Invalid email";
+                span.style.color = "red";
+            } else {
+                let as = str.substring((index + 1));
+                index = as.indexOf(".");
+                index1 = as.lastIndexOf(".");
+                if ((index == -1 || index != index1) || (index != (as.length - 4) && index != (as.length - 3))) {
+                    span.innerHTML = "Invalid email";
+                    span.style.color = "red";
+                } else {
+                    span.innerHTML = "valid email ";
+                    span.style.color = "green";
+                }
+            }
+        }
+
+        function validContact(str) {
+             let flag = true;
+            let count = 1;
+            let span = document.getElementById("c");
+            for (var i = 0; i < str.length; i++) {
+                count++;
+                if (!(str.charCodeAt(i) >= 48 && str.charCodeAt(i) <= 57)) {
+                    flag = false;
+                }
+            }
+            if (flag && (count > 6 && count <= 11)) {
+                span.innerHTML = "Valid Contact";
+                span.style.color = "green";
+
+
+            } else {
+                span.innerHTML = "Invalid Number";
+                span.style.color = "red";
+
+            }
+        }
+
+        function validPass(str) {   
+           
+            let flag = true;
+            let span = document.getElementById("d");
+            for (var i = 0; i < str.length; i++) {
+                if (str.length!=8) {
+                    flag = false;
+                }
+                if(!((str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122)||(str.charCodeAt(i) >= 48 && str.charCodeAt(i) <= 57)||(str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 97))){
+                    flag = false;
+                }
+            }
+            if (flag ) {
+                span.innerHTML = "valid password";
+                span.style.color = "green";
+            } else {
+                span.innerHTML = "Invalid password";
+                span.style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
