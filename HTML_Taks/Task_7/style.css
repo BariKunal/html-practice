@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden auto;
+}
+html{
+    font-size: 8px;
+}
+.wrapper{
+    min-height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_1{
+    min-height: 95rem;
+    width: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+}
+.shoe_left{
+    height: 80rem;
+    width: 55%;
+    background-image: url(./Shoe.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-position: 50%,50%; */
+    display: flex;
+}
+.new_text{
+    height: 20rem;
+    width: 60%;
+    /* border: 1px solid black; */
+    font-size: 3rem;
+    padding: 5rem;
+    line-height: 8rem;
+}
+.red_women{
+    height: 80rem;
+    width: 45%;
+    background-image: url(./Main_img_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 3;
+}
+.logo img{
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    top: 5rem;
+    left: 65rem;
+    z-index: 4;
+    /* border: 1px solid black; */
+}
+.section_2{
+    min-height: 120rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color_box{
+    min-height: 95rem;
+    width: 100%;
+    display: flex;
+    /* border: 1px solid black; */
+    position: relative;
+}
+.left_img_boxes{
+    height: 80rem;
+    width: 50%;
+    display: flex;
+    position:relative;
+}
+.red{
+    height: 55rem;
+    width: 60rem;
+    background-image: url(./img_2.jpg);
+    background-size: cover;
+    background-position: 100% 80%;
+    position: absolute;
+    top: 5rem;
+    left: 9rem;
+    z-index: 4;
+}
+.sweat{
+    height: 70rem;
+    width: 50rem;
+    background-image: url(./img_3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20rem;
+    left: 57rem;
+    z-index: 6;
+}
+.right_color{
+    height: 130rem;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left:95rem;
+    top: -24rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.love_text{
+    height: 50rem;
+    width: 60%;
+    margin-top: 33rem;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5rem;
+    color: white;
+}
+.love_text h1{
+    font-size: 6rem;
+    text-align: end;
+}
+.love_text p{
+    font-size: 3rem;
+    text-align: end;
+    line-height: 4rem;
+}
+.btn{
+    height: 6rem;
+    width: 18rem;
+    background-color: grey;
+    color: aliceblue;
+    font-size: 2rem;
+    border: none;
+}
+
+
+.section_3{
+    min-height: 140rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapp{
+    min-height: 140rem;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    height: 140rem;
+    width: 50%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* justify-content: center; */
+    align-items: end;
+}
+.head_text{
+    height: 30rem;
+    width: 83%;
+    /* border: 1px solid black; */
+    line-height: 7rem;
+    font-size: 2.7rem;
+}
+.btn_2{
+    height: 6rem;
+    width: 22rem;
+    font-size: 2rem;
+    margin-left: 50rem;
+    padding: 1rem;
+    background-color: grey;
+    color: white;
+    border: none;
+}
+.lady_pic{
+    height: 80rem;
+    width: 76%;
+    background-image: url(./img_5.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 16rem;
+    top: 35rem;
+    z-index: 10;
+}
+.red_back{
+    height: 35rem;
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    bottom: 0rem;
+    z-index: 6;
+}
+.right{
+    height: 140rem;
+    width: 50%;
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.head_img{
+    height: 40rem;
+    width: 40rem;
+    background-image: url(./img_4.jpg);
+    background-size: cover;
+    position: absolute;
+    top: -13rem;
+    right: 15rem;
+    z-index: 20;
+}
+.sleeper{
+    height: 70rem;
+    width: 60%;
+    background-image: url(./Sandal.jpg);
+    background-size: cover;
+    background-position: 100% 80%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 13rem;
+    left: 3rem;
+}
+.denim_text{
+    height: 50rem;
+    width: 80%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 2.7rem;
+}
+.textt{
+    height: 30rem;
+    width: 95%;
+    text-align: end;
+    line-height: 6rem;
+    color: rgb(220, 238, 236);
+}
